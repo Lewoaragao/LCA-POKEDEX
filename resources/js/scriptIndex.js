@@ -10,5 +10,5 @@ function stopDefAction(evt) {
 
 function entrar() {
     storage.setItem("name", nomeUsuario.value)
-    window.location.href = "http://127.0.0.1:5080/mainPokedex.html"
+    window.location.href = "http://127.0.0.1:5080/pages/mainPokedex.html"
 }

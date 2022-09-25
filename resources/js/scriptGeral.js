@@ -23,29 +23,8 @@ setTimeout(() => {
     storage.removeItem("name")
 }, 300000);
 
-// Adicionando header aos HTML com o nome do usuário logado
-const nomeUsuario = storage.getItem("name")
-const sair = document.getElementById("sair")
-
-if (nomeUsuario == null) {
-    window.location.href = "/index.html";
-}
-
-const header = document.querySelector("header")
-header.innerHTML = `<h1>Seja bem vindo(a) <span class="text-primary">${nomeUsuario}</span>!</h1>`
-
-// Adicionando menu aos HTML
-const nav = document.querySelector("nav")
-nav.innerHTML = `
-    <div class="nav">
-        <a class="nav-link" href="/mainPokedex.html">Início</a>
-        <a class="nav-link" href="/usePokedex.html">Como usar?</a>
-        <a class="nav-link" href="/index.html" id="sair">Sair</a>
-    </div>
-`
-
-sair.addEventListener('click', () => {
+// Encerrar sessão
+function encerrarSessao() {
     storage.removeItem("name")
     window.location.href = "/index.html";
-})
-
+}
