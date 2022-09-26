@@ -1,11 +1,9 @@
-<body class="container">
-
-    <header></header>
-
+<body class="container d-flex flex-row justify-content-center my-3">
     <main>
-        
-    <nav></nav>
-        
+        <header></header>
+
+        <nav></nav>
+
 
         <div id="dadosGerais"></div>
 
@@ -14,14 +12,15 @@
         <div class="row mt-3">
             <div class="col">
                 <label class="form-label" for="inputPesquisarPokemon">Pesquisar</label>
-                <input class="form-control" id="inputPesquisarPokemon" placeholder="Nome do Pokémon..." onchange="pesquisarUmPokemon()">
+                <input class="form-control" id="inputPesquisarPokemon" placeholder="Nome do Pokémon..."
+                    onchange="pesquisarUmPokemon()">
             </div>
         </div>
 
         <div class="row mt-3" id="listaPokemons"></div>
-    </main>
 
-    <footer></footer>
+        <footer></footer>
+    </main>
 
     <script src="/resources/js/scriptGeral.js"></script>
     <script src="/resources/js/template.js"></script>
