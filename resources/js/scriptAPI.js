@@ -5,10 +5,6 @@ var listaPokemons = []
 var estadoDados
 var quantidadePokemons
 
-window.onload = () => {
-    pesquisarTodosPokemons()
-}
-
 async function pesquisarTodosPokemons() {
     try {
         const resposta = await fetch(URL)
@@ -35,7 +31,7 @@ async function pesquisarTodosPokemons() {
         dadosGerais.innerHTML = `
                 <h2>Dados gerais</h2>
                 <div class="alert-danger my-3 p-2">Erro ao carregar dados!</div>
-`
+              `
         console.log(error)
     }
 }
@@ -43,28 +39,49 @@ async function pesquisarTodosPokemons() {
 function populandoDadosGerais(numeroDePokemons, estadoDoDado) {
     dadosGerais.innerHTML = `
     <div class="accordion my-3" id="accordionDadosGerais">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          Dados Gerais
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionDadosGerais">
-        <div class="accordion-body">
-            <div class="row">
-                <div class="col">
-                    <p class="d-flex justify-content-between align-items-center">Pokémons encontrados:</p>
-                    <span class="badge bg-primary rounded-pill">${numeroDePokemons}</span>
-                </div>
-                <div class="col">
-                    <p class="d-flex justify-content-between align-items-center">Estado dos dados:</p>
-                    <span class="badge bg-primary rounded-pill">${estadoDoDado}</span>
-                </div>
-            </divc>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button id="btnDadosGerais" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Dados Gerais
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionDadosGerais">
+          <div class="accordion-body">
+              <div class="row">
+                  <div class="col">
+                      <p class="d-flex justify-content-between align-items-center">Pokémons encontrados:</p>
+                      <span class="badge bg-primary rounded-pill">${numeroDePokemons}</span>
+                  </div>
+                  <div class="col">
+                      <p class="d-flex justify-content-between align-items-center">Estado dos dados:</p>
+                      <span class="badge bg-primary rounded-pill">${estadoDoDado}</span>
+                  </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#btnDadosGerais" aria-expanded="true" aria-controls="btnDadosGerais">
+      Botão com data-target
+    </button>
+
+    <div class="collapse" id="btnDadosGerais">
+      <div class="card card-body">
+          <div class="row">
+            <div class="col">
+                <p class="d-flex justify-content-between align-items-center">Pokémons encontrados:</p>
+                <span class="badge bg-primary rounded-pill">${numeroDePokemons}</span>
+            </div>
+            <div class="col">
+                <p class="d-flex justify-content-between align-items-center">Estado dos dados:</p>
+                <span class="badge bg-primary rounded-pill">${estadoDoDado}</span>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
     `
 }
 
@@ -87,3 +104,7 @@ function populandoDadosGerais(numeroDePokemons, estadoDoDado) {
 // var resultNext = listItems(next, 1, 2);
 // var resultNext2 = listItems(next, 2, 2);
 // var resultNext3 = listItems(next, 3, 2);
+
+window.onload = () => {
+  pesquisarTodosPokemons()
+}
