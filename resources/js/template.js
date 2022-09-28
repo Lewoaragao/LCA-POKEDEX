@@ -22,4 +22,9 @@ nav.innerHTML = `
 
 // Rodapé
 const footer = document.querySelector('footer')
-footer.innerHTML = ` ${new Date().getFullYear()}`
+footer.innerHTML = `
+<div class="d-flex justify-content-center align-items-center flex-column">
+        <p class="text-muted">Open source ❤ ${new Date().getFullYear()}</p>
+        <a href="https://github.com/Lewoaragao" target="blank"><img class="img-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Logo GitHub"></a>
+</div>
+`
