@@ -1,0 +1,5 @@
+lista pokemon e suas evolucoes, com imagem e seus atributos, simples, com barra de pesquisa para buscar pelo nome
+
+implementar:
+- paginação
+- busca por id

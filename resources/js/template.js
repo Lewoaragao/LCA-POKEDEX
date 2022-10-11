@@ -15,6 +15,7 @@ const sair = document.querySelector("#sair")
 nav.innerHTML = `
     <div class="nav">
         <a class="nav-link" href="/pages/mainPokedex.html">Início</a>
+        <a class="nav-link" href="/pages/geralPokedex.html">Pokédex Geral</a>
         <a class="nav-link" href="/pages/usePokedex.html">Como usar?</a>
         <a class="nav-link" href="/index.html" onclick="encerrarSessao()">Sair</a>
     </div>

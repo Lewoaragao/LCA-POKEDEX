@@ -62,10 +62,6 @@ function populandoDadosGerais(numeroDePokemons, estadoDoDado) {
       </div>
     </div>
 
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#btnDadosGerais" aria-expanded="true" aria-controls="btnDadosGerais">
-      Botão com data-target
-    </button>
-
     <div class="collapse" id="btnDadosGerais">
       <div class="card card-body">
           <div class="row">
